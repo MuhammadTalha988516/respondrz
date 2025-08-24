@@ -1,15 +1,21 @@
-import React from "react"; 
-import Footer from "../Utils/Footer";
+import React from 'react'
+import Navbar from '../Utils/Navbar'
+import Banner from '../Landing/Banner'
+import About from '../Landing/About'
+import Partners from '../Landing/Partners'
+import Footer from '../Utils/Footer'
 
-import Banner from "../Landing/Banner";
-
-const Home = () =>{
-
-return (
+const Home = () => {
+  return (
     <>
-    <Banner/>
-    <Footer/>
+    <Navbar />
+    <Banner />
+    <About />
+    <Partners />
+    <Footer />
+    
     </>
-);
+  )
 }
-export default Home;
+
+export default Home

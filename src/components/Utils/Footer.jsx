@@ -3,7 +3,7 @@ import buttons from "../../assets/appbuttons.png"
 
 const Footer = () => {
   return (
-    <div className="w-full h-screen bg-[#F34434] py-8">
+    <div className="w-full h-full bg-white py-8">
       {/* Main Grid with 2 columns */}
       <div className="grid grid-cols-3 gap-8 px-8 text-white">
         

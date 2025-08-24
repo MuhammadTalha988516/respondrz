@@ -9,17 +9,17 @@ import Impact from "./components/pages/Impact";
 function App() {
   return (
     <div>
-      <Navbar />
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact-us" element={<Contact />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/impact" element={<Impact/>} />
 
       </Routes>
     </div>
-  );
+  )
 }
 
 export default App;
