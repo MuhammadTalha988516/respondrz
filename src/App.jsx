@@ -1,17 +1,25 @@
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Utils/Navbar";
+import Home from "./components/pages/Home";
+import About from "./components/pages/AboutUs";
+import Contact from "./components/pages/ContactUs";
+import Partners from "./components/pages/Partners";
+import Impact from "./components/pages/Impact";
 
-import Navbar from "./components/Utils/Navbar"
-import Footer from "./components/Utils/Footer"
-import Banner from "./components/Landing/Banner"
 function App() {
- 
-
   return (
-    <>
-     <Navbar />
-     <Banner />
-     <Footer />
-    </>
-  )
+    <div>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/partners" element={<Partners />} />
+        <Route path="/impact" element={<Impact/>} />
+
+      </Routes>
+    </div>
+  );
 }
 
-export default App
+export default App;
