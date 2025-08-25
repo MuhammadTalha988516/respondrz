@@ -1,13 +1,18 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Utils/Navbar";
+
 import Home from "./components/pages/Home";
 import About from "./components/pages/AboutUs";
 import Contact from "./components/pages/ContactUs";
 import Partners from "./components/pages/Partners";
 import Impact from "./components/pages/Impact";
+import { useLenis } from "./hooks/uselenis";
+
+
 
 function App() {
+  useLenis();
   return (
+    
     <div>
       
       <Routes>

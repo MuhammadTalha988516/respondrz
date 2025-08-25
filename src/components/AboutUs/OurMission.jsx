@@ -16,7 +16,7 @@ const OurMission = () => {
 
       {/* Right side - Sponsor */}
       <div className="flex flex-col justify-center items-center text-center space-y-6 px-4">
-        <h1 className="text-3xl font-bold">Our Sponsor</h1>
+        <h1 className="text-3xl font-bold">Our Vision</h1>
         <p className="text-lg leading-relaxed">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
           Deleniti atque odio repellat, nesciunt fuga nostrum maiores magnam laborum numquam unde. 

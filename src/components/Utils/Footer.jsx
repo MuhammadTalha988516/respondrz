@@ -1,40 +1,48 @@
-import Logo from "../../assets/Logo.png"
-import buttons from "../../assets/appbuttons.png"
+import Logo from "../../assets/Logo.png";
+import buttons from "../../assets/appbuttons.png";
 
 const Footer = () => {
   return (
-    <div className="w-full h-full bg-white py-8">
-      {/* Main Grid with 2 columns */}
-      <div className="grid grid-cols-3 gap-8 px-8 text-white">
+    <footer className="w-full bg-red-400 text-white py-10">
+      {/* Main Grid */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
         
-        {/* Left Column (Logo + Buttons) */}
-        <div className="grid grid-cols-1 gap-4">
+        {/* Column 1: Logo + Buttons */}
+        <div className="flex flex-col gap-4 items-start">
           <img src={Logo} alt="Logo" className="w-32" />
-          <img src={buttons} alt="app buttons" className="w-40" />
+          <img src={buttons} alt="App Buttons" className="w-40" />
         </div>
 
-        {/* Right Column (Text / Links) */}
-        <div className="flex flex-col gap-2 justify-center">
-          <h2 className="text-lg font-semibold">Quick Links</h2>
+        {/* Column 2: Quick Links */}
+        <div className="flex flex-col gap-2">
+          <h2 className="text-lg font-semibold mb-2">Quick Links</h2>
           <a href="#" className="hover:underline">About Us</a>
           <a href="#" className="hover:underline">Contact</a>
           <a href="#" className="hover:underline">Privacy Policy</a>
-          <p className="text-sm mt-4">© 2025 Respondrz - All rights reserved</p>
-        </div>
-        <div className="flex items-center">
-          <input 
-          type="text" 
-          placeholder="Enter your Email here "
-          className="bg-white text-black w-[180px] h-auto "
-          />
-          <button className="ml-4 border-2 rounded-md bg-[#F34434] px-6 py-1/2">Subscribe</button>
-      
-       
         </div>
 
+        {/* Column 3: Subscribe */}
+        <div className="flex flex-col gap-4">
+          <h2 className="text-lg font-semibold">Subscribe</h2>
+          <div className="flex">
+            <input 
+              type="text" 
+              placeholder="Enter your Email"
+              className="bg-white text-black px-3 py-2 rounded-l-md w-[200px] focus:outline-none"
+            />
+            <button className="bg-[#F34434] px-5 py-2 rounded-r-md hover:bg-red-600 transition">
+              Subscribe
+            </button>
+          </div>
+        </div>
       </div>
-    </div>
-  )
-}
 
-export default Footer
+      {/* Bottom Bar */}
+      <div className="mt-10 border-t border-gray-700 pt-4 text-center text-sm text-black">
+        © 2025 Respondrz - All rights reserved | <a href="#" className="hover:underline">Privacy Policy</a>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

@@ -5,6 +5,7 @@ import About from '../AboutUs/About'
 import OurValues from '../AboutUs/OurValues'
 import OurMission from '../AboutUs/OurMission'
 import Footer from '../Utils/Footer'
+import FAQs from '../AboutUs/FAQs'
 
 const AboutUs = () => {
   return (
@@ -14,6 +15,7 @@ const AboutUs = () => {
    <About />
    <OurValues />
    <OurMission />
+   <FAQs />
    <Footer />
    </>
   )

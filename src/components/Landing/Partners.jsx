@@ -1,62 +1,58 @@
-import React from "react";
+// src/components/Partners.jsx
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 const Partners = () => {
+  const partners = [
+    { id: "01", text: "Government" },
+    { id: "02", text: "NGOs" },
+    { id: "03", text: "Corporate Sector" },
+    { id: "04", text: "Private Hospitals" },
+    { id: "05", text: "Public Sector" },
+    { id: "06", text: "Insurance Company" },
+  ];
+
+  const containerRef = useRef(null);
+
+  // Track vertical scroll of section
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"], // section start to end
+  });
+
+  // Map vertical scroll to horizontal X movement
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", `-${(partners.length - 1) *10}%`]);
+
   return (
-    <div className="w-full bg-[#213066] py-10">
-      <h2 className="text-2xl font-bold text-center text-white mb-8">
-        Our Partners
-      </h2>
-
-      <div className="flex gap-6 flex-wrap  px-0">
-        <div className="w-[220px] h-[320px] text-white 
-          flex items-center justify-center text-lg font-semibold 
-          rounded-2xl shadow-md shrink-0
-          hover:shadow-xl hover:-translate-y-1 
-          transition-transform duration-300">
-          Government
-        </div>
-
-        <div className="w-[220px] h-[320px] text-white 
-          flex items-center justify-center text-lg font-semibold 
-          rounded-2xl shadow-md shrink-0
-          hover:shadow-xl hover:-translate-y-1 
-          transition-transform duration-300">
-          NGOs
-        </div>
-
-        <div className="w-[220px] h-[320px] text-white 
-          flex items-center justify-center text-lg font-semibold 
-          rounded-2xl shadow-md shrink-0
-          hover:shadow-xl hover:-translate-y-1 
-          transition-transform duration-300">
-          Corporate Sector
-        </div>
-
-        <div className="w-[220px] h-[320px] text-white 
-          flex items-center justify-center text-lg font-semibold 
-          rounded-2xl shadow-md shrink-0
-          hover:shadow-xl hover:-translate-y-1 
-          transition-transform duration-300">
-          Private Hospitals
-        </div>
-
-        <div className="w-[220px] h-[320px] text-white 
-          flex items-center justify-center text-lg font-semibold 
-          rounded-2xl shadow-md shrink-0
-          hover:shadow-xl hover:-translate-y-1 
-          transition-transform duration-300">
-          Public Sector
-        </div>
-
-        <div className="w-[220px] h-[320px] text-white 
-          flex items-center justify-center text-lg font-semibold 
-          rounded-2xl shadow-md shrink-0
-          hover:shadow-xl hover:-translate-y-1 
-          transition-transform duration-300">
-          Insurance Company
-        </div>
+    <section
+      ref={containerRef}
+      className="relative w-full h-[300vh] bg-gray-300 text-white"
+    >
+      {/* Sticky wrapper */}
+      <div className="sticky top-0 h-screen flex items-center overflow-hidden">
+        <motion.div
+          style={{ x }}
+          className="flex gap-10 px-20"
+        >
+          {partners.map((partner) => (
+            <motion.a
+              key={partner.id}
+              href="#"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-[300px] h-[400px] border border-white flex flex-col 
+                items-center justify-center text-center rounded-xl bg-[#111] 
+                shadow-xl p-6 shrink-0 cursor-pointer"
+            >
+              <span className="text-5xl font-bold text-pink-400 mb-4">
+                {partner.id}
+              </span>
+              <p className="text-lg font-semibold">{partner.text}</p>
+            </motion.a>
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
