@@ -1,5 +1,6 @@
 import React from "react";
 import contactImage from "../../assets/contactus.jpg";
+import { Link } from "react-router-dom"
 
 const Contact = () => {
   return (
@@ -21,9 +22,13 @@ const Contact = () => {
           molestias. Esse eveniet provident ipsum, cumque neque accusantium
           fugit obcaecati modi expedita unde asperiores!
         </p>
-        <button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-md font-semibold transition">
+        
+     <Link to="/contact-us">
+        <button className="bg-red-600 cursor-pointer hover:bg-red-700 text-white px-8 py-3 rounded-md font-semibold transition">
           Contact Us
         </button>
+      </Link>
+
       </div>
     </section>
   );

@@ -1,49 +1,94 @@
-import React from 'react'
+import React, { useState } from "react";
 
 const Form = () => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      alert(data.message);
+      setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" });
+    } catch (err) {
+      alert("Error sending email!");
+    }
+  };
+
   return (
     <div className="flex justify-center items-center py-12 bg-gray-50">
       <div className="bg-white shadow-lg rounded-2xl p-8 w-[500px]">
-        
-        {/* Heading */}
         <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">
           Get in Touch
         </h2>
 
-        {/* Form */}
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div className="flex gap-4">
             <input
               type="text"
+              name="firstName"
               placeholder="First Name"
+              value={formData.firstName}
+              onChange={handleChange}
               className="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F34434]"
+              required
             />
             <input
               type="text"
+              name="lastName"
               placeholder="Last Name"
+              value={formData.lastName}
+              onChange={handleChange}
               className="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F34434]"
+              required
             />
           </div>
 
           <input
             type="email"
+            name="email"
             placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F34434]"
+            required
           />
 
           <input
             type="tel"
+            name="phone"
             placeholder="Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F34434]"
           />
 
           <textarea
+            name="message"
             placeholder="Message"
             rows="4"
+            value={formData.message}
+            onChange={handleChange}
             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F34434]"
+            required
           ></textarea>
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="w-full bg-[#F34434] text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition"
@@ -53,7 +98,7 @@ const Form = () => {
         </form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Form
+export default Form;

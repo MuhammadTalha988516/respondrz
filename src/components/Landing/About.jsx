@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -21,7 +22,12 @@ const About = () => {
             respond faster, and stay organized. Our mission is to make
             communication seamless and effective.
           </p>
-          <button className='mt-6 px-8 py-4 bg-red-500  rounded-md cursor-pointer hover:bg-white hover:text-black'>Explore More</button>
+          <Link 
+          to="/about-us"
+          className='mt-6 px-8 py-4 bg-red-500  rounded-md cursor-pointer hover:bg-white hover:text-black'
+          >
+            Explore More
+            </Link>
         </div>
       </div>
     </>
