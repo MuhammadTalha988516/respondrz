@@ -5,7 +5,7 @@ import bgImage from "../../assets/Pban.webp"; // your background image
 const BannerSection = () => {
   return (
     <section
-      className="relative w-full h-[80vh] flex items-center justify-center bg-cover bg-center"
+      className="relative w-full h-[100vh] flex items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Overlay */}

@@ -3,7 +3,7 @@ import banner from '../../assets/contactbanner.png'
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-[300px] md:h-[400px]">
+    <div className="relative w-full h-[100vh] ">
       {/* Background Image */}
       <img 
         src={banner} 

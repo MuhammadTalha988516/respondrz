@@ -3,16 +3,16 @@ import contactImage from "../../assets/contactus.jpg";
 
 const Contact = () => {
   return (
-    <section className="relative w-lvw h-auto">
+    <section className="relative">
       {/* Background Image */}
       <img
         src={contactImage}
         alt="Contact Us"
-        className="w-full h-full object-cover"
+        className="w-full object-cover h-[50vh] mb-10"
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-opacity-60 flex flex-col items-center justify-center text-center px-6">
+      <div className="absolute inset-0  bg-opacity-60 flex flex-col items-center justify-center text-center px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
           Get in Touch With Us
         </h2>

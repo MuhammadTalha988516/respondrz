@@ -1,10 +1,10 @@
 import React from "react"; 
 import ImBan from "../Impact/ImBan";
-import ImpactStats from "../Impact/ImpactStats";
-import KeyImpactAreas from "../Impact/KeyImpactAreas"
-import VisionSection from "../Impact/VisionSection"
+import ImpactStats from "../Impact/ImpactBanner";
+import KeyImpactAreas from "../Impact/RespondrzImpact"
+import SectorImpact from "../Impact/SectorImpact"
 import Footer from "../Utils/Footer";
-import CaseStudy from "../Impact/CaseStudy";
+import CaseStudy from "../Impact/PartnerNow";
 import Navbar from "../Utils/Navbar";
 
 const Impact = () => {
@@ -14,8 +14,8 @@ const Impact = () => {
       <ImBan/>
       <ImpactStats />
       <KeyImpactAreas />
+      <SectorImpact/>
       <CaseStudy/>
-      <VisionSection />
       <Footer/>
 
     </>
