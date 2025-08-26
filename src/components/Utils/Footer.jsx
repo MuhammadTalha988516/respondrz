@@ -1,7 +1,32 @@
+import { useState } from "react";
 import Logo from "../../assets/Logo.png";
 import buttons from "../../assets/appbuttons.png";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubscribe = async () => {
+    if (!email) {
+      setMessage("Please enter a valid email.");
+      return;
+    }
+
+    try {
+      const res = await fetch("http://localhost:5000/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await res.json();
+      setMessage(data.message);
+      setEmail(""); // clear field
+    } catch (error) {
+      setMessage("Something went wrong. Try again.");
+    }
+  };
+
   return (
     <footer className="w-full bg-red-400 text-white py-10">
       {/* Main Grid */}
@@ -28,12 +53,18 @@ const Footer = () => {
             <input 
               type="text" 
               placeholder="Enter your Email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="bg-white text-black px-3 py-2 rounded-l-md w-[200px] focus:outline-none"
             />
-            <button className="bg-[#F34434] px-5 py-2 rounded-r-md hover:bg-red-600 transition">
+            <button 
+              onClick={handleSubscribe}
+              className="bg-[#F34434] px-5 py-2 rounded-r-md hover:bg-red-600 transition"
+            >
               Subscribe
             </button>
           </div>
+          {message && <p className="text-sm">{message}</p>}
         </div>
       </div>
 

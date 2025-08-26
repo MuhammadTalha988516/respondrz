@@ -4,6 +4,7 @@ import Banner from "../AboutUs/Banner"
 import About from '../AboutUs/About'
 import OurValues from '../AboutUs/OurValues'
 import OurMission from '../AboutUs/OurMission'
+import OurVision from "../AboutUs/OurVision"
 import Footer from '../Utils/Footer'
 import FAQs from '../AboutUs/FAQs'
 
@@ -13,8 +14,9 @@ const AboutUs = () => {
    <Navbar />
    <Banner />
    <About />
-   <OurValues />
    <OurMission />
+   <OurVision />
+   <OurValues />
    <FAQs />
    <Footer />
    </>

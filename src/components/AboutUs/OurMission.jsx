@@ -1,26 +1,39 @@
-import React from 'react'
+import React, { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
+import missionImg from "../../assets/mission.png"
 
 const OurMission = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1200, easing: "ease-in-out", once: false }) 
+  }, [])
+
   return (
-    <div className="bg-[#F34434] grid grid-cols-1 md:grid-cols-2 w-screen h-auto md:h-[200px] text-white px-8 py-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 w-full min-h-[50vh] px-8 py-8 text-white bg-gray-50">
       
-      {/* Left side - Mission */}
-      <div className="flex flex-col justify-center items-center text-center space-y-6 px-4 border-r md:border-white">
-        <h1 className="text-3xl font-bold">Our Mission</h1>
-        <p className="text-lg leading-relaxed">
-          To create a world where immediate emergency response is accessible to everyone, everywhere, 
-          regardless of time, location, or circumstance. We envision a future where emergency care is 
-          democratized, and no one feels helpless in a critical moment.
-        </p>
+      {/* Left side - Image */}
+      <div 
+        className="w-full h-[60vh] flex justify-center items-center"
+        data-aos="zoom-in"
+      >
+        <img
+          src={missionImg}
+          alt="Our Mission"
+          className="w-auto h-[50vh] object-cover"
+        />
       </div>
 
-      {/* Right side - Sponsor */}
-      <div className="flex flex-col justify-center items-center text-center space-y-6 px-4">
-        <h1 className="text-3xl font-bold">Our Vision</h1>
-        <p className="text-lg leading-relaxed">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-          Deleniti atque odio repellat, nesciunt fuga nostrum maiores magnam laborum numquam unde. 
-          Eum modi qui iste accusantium similique maxime perspiciatis, libero expedita?
+      {/* Right side - Mission Text */}
+      <div 
+        className="bg-[#F34434] flex flex-col justify-center items-center md:items-start text-center md:text-left space-y-4 px-6 py-8  rounded-2xl border-white"
+        data-aos="fade-up"
+      >
+        <h1 className="text-4xl  font-bold">Our Mission</h1>
+        <p className="text-xl  leading-relaxed max-w-lg">
+          To create a world where immediate emergency response is accessible to 
+          everyone, everywhere, regardless of time, location, or circumstance. 
+          We envision a future where emergency care is democratized, and no one 
+          feels helpless in a critical moment.
         </p>
       </div>
 

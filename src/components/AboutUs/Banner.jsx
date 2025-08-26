@@ -1,21 +1,23 @@
-import React from 'react'
+import React from "react"
 import banner from "../../assets/bannerabout.png"
 
 const Banner = () => {
   return (
-    <>
-    
-    <div>
+    <div className="relative w-full h-[300px] md:h-[450px] lg:h-[550px]">
+      {/* Banner Image */}
+      <img
+        src={banner}
+        alt="respondrz"
+        className="w-full h-full object-cover"
+      />
 
-        <img src={banner} alt="respondrz" />
+      {/* Overlay Text */}
+      <div className="absolute inset-0 bg-black/40 flex justify-center items-center">
+        <h1 className="text-white text-4xl md:text-6xl font-extrabold uppercase tracking-wide">
+          About Us
+        </h1>
+      </div>
     </div>
-    
-    
-    
-    
-    
-    
-    </>
   )
 }
 
