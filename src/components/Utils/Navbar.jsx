@@ -28,7 +28,7 @@ function Navbar() {
           />
         </NavLink>
 
-        {/* Hamburger (Mobile Only) */}
+        
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-white ml-4 flex-shrink-0"
