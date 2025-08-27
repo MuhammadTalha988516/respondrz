@@ -6,7 +6,7 @@ const ImBan = () => {
       className="relative w-full h-[100vh] flex items-center justify-center bg-cover bg-center"
       style={{
         backgroundImage:
-          "url('https://images.pexels.com/photos/6520076/pexels-photo-6520076.jpeg')",
+          "url('https://images.pexels.com/photos/6520084/pexels-photo-6520084.jpeg')",
       }}
     >
       {/* Overlay */}

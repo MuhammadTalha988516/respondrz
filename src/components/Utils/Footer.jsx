@@ -28,7 +28,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full bg-red-400 text-white py-10">
+    <footer className="w-full h-[60vh] bg-black text-white py-20">
       {/* Main Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6">
         
@@ -69,7 +69,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="mt-10 border-t border-gray-700 pt-4 text-center text-sm text-black">
+      <div className="mt-10 border-t border-gray-700 pt-4 text-center text-sm text-white">
         © 2025 Respondrz - All rights reserved | <a href="#" className="hover:underline">Privacy Policy</a>
       </div>
     </footer>
