@@ -37,7 +37,7 @@ function Navbar() {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex sticky items-center flex-grow rounded-4xl ml-90">
+        <div className="hidden md:flex sticky items-center flex-grow rounded-4xl ml-70">
           <ul className="flex bg-black/50 border border-red-500  text-white text-sm font-medium rounded-full overflow-hidden shadow-lg">
             <li>
               <NavLink
