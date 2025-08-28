@@ -5,7 +5,7 @@ import bgImage from "../../assets/Pban.webp"; // your background image
 const BannerSection = () => {
   return (
     <section
-      className="relative w-full h-[100vh] flex items-center justify-center bg-cover bg-center"
+      className="relative w-full h-[100vh] flex items-center mb-10 justify-center bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Overlay */}
@@ -13,30 +13,26 @@ const BannerSection = () => {
 
       {/* Centered Content */}
       <div className="relative z-10 text-center text-white px-4">
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        <h1 className="text-6xl md:text-7xl font-bold mb-6">
           <Typewriter
-            words={["Who Can Be Our Partner?"]}
+            words={["Our Solutions"]}
              // type once
             cursor
             cursorStyle="|"
             typeSpeed={80}
-            
             delaySpeed={1500}
           />
         </h1>
 
-        <p className="text-xl max-w-4xl md:text-2xl">
+        <p className="text-3xl max-w-4xl md:text-2xl">
           <Typewriter
             words={[
-              "At RespondrZ, we believe that saving lives should never be limited by boundaries or lack of coordination.",
-              "Anyone who provides ambulance services or supports the noble cause of digitalizing emergency response can be our partner.",
-              "Together, we can build a safer, faster, and more compassionate future for people in need."
+              "Respondrz is not just software, it is a lifeline. Our digital platform brings together all the players who matter in a crisis to create one synchronized response system."
             ]}
-            loop={false} // type once
+             
             cursor
             cursorStyle="|"
-            typeSpeed={40}
-            deleteSpeed={30}
+            typeSpeed={80}
             delaySpeed={1000}
           />
         </p>

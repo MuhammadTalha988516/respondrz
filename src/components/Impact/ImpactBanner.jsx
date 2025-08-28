@@ -23,16 +23,9 @@ const ImpactBanner = () => {
               Our Impact
             </h2>
 
-            <div className="text-xl md:text-xl text-slate-800 space-y-3">
+            <div className="text-xl md:text-2xl max-w-xl text-slate-800 ">
               <p>
-                Respondrz partners with governments, public sector organizations,
-                private hospitals, insurance companies, and NGOs to establish and
-                operate effective emergency services through public–private
-                partnerships and technical collaborations. These efforts advance
-                SDG 1 – [No Poverty], SDG 3 – [Good Health and Wellbeing], SDG 5 – 
-                [Gender Equality], SDG 8 – [Decent Work and Economic Growth], SDG 9 – 
-                [Industry, Innovation, and Infrastructure], SDG 11 – [Sustainable Cities
-                and Communities], and SDG 17 – [Partnerships for the Goals].
+                We proudly support the United Nations Sustainable Development Goals (SDGs), with measurable contributions to health, equality, sustainable cities, innovation, partnerships, and environmental protection. Every life saved, every second reduced in response time, and every resource optimized brings us closer to a world where safety and dignity are not privileges, but rights.
               </p>
             </div>
           </motion.div>

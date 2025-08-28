@@ -1,109 +1,131 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { HeartPulse, BarChart3, Activity, Users, Building2, ShieldCheck } from "lucide-react";
 
-const sectors = [
+import bg1 from "../../assets/bg1.jpg";
+import bg2 from "../../assets/bg2.jpeg";
+import bg3 from "../../assets/bg3.jpg";
+import bg4 from "../../assets/bg4.jpg";
+import bg from "../../assets/bg.jpg";
+
+const audiences = [
   {
-    title: "Public Sector (Governments)",
-    subtitle: "Saving Citizens, Building Data for the Future",
-    desc: `Governments carry the responsibility of protecting citizens, but fragmented ambulance systems make it difficult to respond quickly and fairly. RespondrZ changes this.`,
-    points: [
-      "Faster Help for Citizens: Seamlessly connect your ambulances to the public through a one-tap SOS system.",
-      "Real-Time Insights: Access heatmaps and live data on emergencies across your region.",
-      "Better Policy & Planning: Use accurate data for resource allocation, disaster management, and budgeting.",
-      "Transparency: Track ambulances and ensure fair, efficient use of public resources.",
+    title: "For Governments",
+    desc: `Reuse Dead Resources (Ambulances), Track, Coordinate, and Deploy Resources Instantly. Gain Data Insights, for Policy & Planning, Resources & Budget Allocation, Situational Awareness that Saves Lives and Boosts Citizen Trust.`,
+    backgroundImage: bg,
+    cards: [
+      { title: "Reuse Resources", desc: "Repurpose idle ambulances and optimize usage.", icon: HeartPulse },
+      { title: "Data Insights", desc: "Analytics for policy & budget allocation.", icon: BarChart3 },
+      { title: "Situational Awareness", desc: "Live tracking that saves lives.", icon: Activity },
     ],
   },
   {
-    title: "NGOs (Non-Profit Organizations)",
-    subtitle: "Making Impact Where It Matters Most",
-    desc: `NGOs are at the heart of humanitarian work, but without digital tools, their impact often remains unseen. RespondrZ amplifies your mission.`,
-    points: [
-      "Visibility: Show communities your role in saving lives.",
-      "Efficiency: Dispatch ambulances faster through digital alerts.",
-      "Accountability: Share transparent reports with donors and partners.",
-      "Sustainability: Reduce operational costs through better fleet utilization.",
+    title: "For NGOs",
+    desc: `There is Err in human, people in distress times may dial an incorrect number or possibly can not recall in an emergency situation, RespondrZ make sure that people reach to the authorized emergency responders without making phone call. Ensure donations and aid reach the right people at the right time, cutting waste and duplication.`,
+    backgroundImage: bg1,
+    cards: [
+      { title: "Direct Connection", desc: "No wrong calls in emergencies.", icon: Users },
+      { title: "Efficient Aid", desc: "Deliver donations without duplication.", icon: ShieldCheck },
+      { title: "Trusted Reach", desc: "Boost credibility and citizen trust.", icon: HeartPulse },
     ],
   },
   {
-    title: "Corporate Sector",
-    subtitle: "CSR That Truly Saves Lives",
-    desc: `Corporate Social Responsibility (CSR) is not just about giving back—it is about creating lasting impact. RespondrZ offers a powerful avenue for corporations to contribute.`,
-    points: [
-      "Life-Saving CSR: Sponsor ambulances or fund digital access for vulnerable communities.",
-      "Public Recognition: Show customers and employees that you stand for life and safety.",
-      "Shared Value: A safer, healthier society benefits businesses too.",
+    title: "For Hospitals & Healthcare Providers",
+    desc: `Hospitals having a full fledge Emergency Setup, requires RespondrZ platform to respond the emergency happened in the nearest proximity. We strongly believe an emergency should be dealt with priority, to reduce suffering, pain, and deaths, it also multiply the Business.`,
+    backgroundImage: bg2,
+    cards: [
+      { title: "Emergency Priority", desc: "Respond faster to nearby cases.", icon: HeartPulse },
+      { title: "Grow Business", desc: "Increase patient trust & reputation.", icon: Building2 },
+      { title: "Seamless Response", desc: "Coordinate instantly with resources.", icon: Activity },
     ],
   },
   {
-    title: "Private Hospitals",
-    subtitle: "Expanding Reach, Growing Responsibly",
-    desc: `Private hospitals often own ambulances that operate independently. By partnering with RespondrZ, you gain both business growth and social impact.`,
-    points: [
-      "Increased Utilization: Receive more emergency cases by being digitally accessible.",
-      "Reputation: Be recognized as a hospital that prioritizes saving lives, not just profits.",
-      "Digital Inclusion: Join the national effort of healthcare modernization.",
-      "Community Trust: Build loyalty with patients and families through fast, transparent response.",
+    title: "For Insurance Companies",
+    desc: `Since Insurance Companies (Micro/Marcro Insurances) provides health insurances, may staple cost efficient pre-hospital care with their insurance plans to add value to it. ResopndrZ is a user-friendly SaaS Platform, and need of general and vulnerable population.`,
+    backgroundImage: bg3,
+    cards: [
+      { title: "Value Plans", desc: "Add emergency care to insurance.", icon: ShieldCheck },
+      { title: "Affordable Care", desc: "Pre-hospital services bundled in.", icon: BarChart3 },
+      { title: "Wider Reach", desc: "Serve vulnerable populations better.", icon: Users },
     ],
   },
   {
-    title: "Insurance Companies",
-    subtitle: "Enabling Smarter Healthcare Protection",
-    desc: `Insurance providers play a crucial role in healthcare accessibility. By joining RespondrZ, insurance companies can make their services faster, smarter, and more impactful.`,
-    points: [
-      "Seamless Claims: Faster verification and processing of ambulance and emergency care claims.",
-      "Data Insights: Access valuable data on emergencies to design better coverage plans.",
-      "Customer Loyalty: Build trust by showing real-time support during life-and-death moments.",
-      "Social Impact: Be seen as a partner that prioritizes health and protection beyond policies.",
+    title: "For Corporations",
+    desc: `You believe in Corporate Social Responsibility (CSR), and wanna buy coffee to needy ones or vulnerable population? Yes you can. You can add value to health benefits to your employees, add value to the society by Protect Raiders, general workers, religious minorities, and the rural population, by helping us building an infrastructure for them.`,
+    backgroundImage: bg4,
+    cards: [
+      { title: "CSR Value", desc: "Support communities meaningfully.", icon: Users },
+      { title: "Employee Benefits", desc: "Add healthcare to benefits.", icon: HeartPulse },
+      { title: "Community Impact", desc: "Protect vulnerable populations.", icon: ShieldCheck },
     ],
   },
 ];
 
 const OurPartners = () => {
   return (
-    <div className="w-full bg-gray-100">
-      {sectors.map((sector, index) => (
-        <section key={index} className="py-16 px-6 border-b border-gray-200">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            
-            {/* Text Section */}
-            <div>
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">
-                {sector.title}
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">{sector.subtitle}</p>
-              <p className="text-gray-700 mb-6">
-                {sector.desc}{" "}
-                <span className="font-semibold text-red-600">RespondrZ</span>
-              </p>
-            </div>
+    <div className="flex flex-col">
+      {audiences.map((item, index) => (
+        <section
+          key={index}
+          className="relative w-full min-h-screen flex items-center"
+        >
+          {/* Background */}
+          <div
+            className="absolute inset-0 h-[100vh] bg-cover bg-center"
+            style={{ backgroundImage: `url(${item.backgroundImage})` }}
+          >
+            <div className="absolute inset-0 bg-black/60"></div>
+          </div>
 
-            {/* Bullet Section */}
-            <div className="bg-white shadow-lg rounded-2xl p-8">
-              <ul className="space-y-4">
-                {sector.points.map((point, i) => {
-                  const [strong, ...rest] = point.split(":");
-                  return (
-                    <li key={i} className="flex items-start">
-                      <span className="text-red-500 font-bold mr-3">•</span>
-                      <span>
-                        <strong>{strong}:</strong> {rest.join(":")}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
-              <p className="mt-6 font-semibold text-gray-800">
-                {sector.title.includes("Governments") &&
-                  "By partnering with RespondrZ, governments restore trust, save more lives, and gain actionable intelligence for a healthier nation."}
-                {sector.title.includes("NGOs") &&
-                  "Together, we can turn compassion into action, and ensure no life is lost for lack of timely help."}
-                {sector.title.includes("Corporate") &&
-                  "By joining hands with RespondrZ, your CSR investment becomes more than charity—it becomes a legacy of lives saved."}
-                {sector.title.includes("Hospitals") &&
-                  "Inclusion in RespondrZ means becoming part of a nationwide life-saving network."}
-                {sector.title.includes("Insurance") &&
-                  "RespondrZ allows insurers to go beyond paperwork and truly stand beside their customers when they need help the most."}
+          {/* Content (Zig-Zag layout) */}
+          <div
+            className={`relative z-10  mt-10 mx-auto px-6 lg:px-12 py-20 flex flex-col md:flex-row items-start gap-50
+              ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
+          >
+            {/* Left/Right Text */}
+            <motion.div
+              className="flex-1 text-white"
+              initial={{ x: index % 2 === 0 ? -80 : 80, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ always: true }}
+            >
+              <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                {item.title}
+              </h1>
+              <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-2xl">
+                {item.desc}
               </p>
-            </div>
+              <div className="flex gap-4">
+                <button className="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg text-white font-medium transition">
+                  Get Started
+                </button>
+
+              </div>
+            </motion.div>
+
+            {/* Right/Left Cards */}
+            <motion.div
+              className="flex-1 grid grid-cols-1 sm:grid-cols-1 gap-6"
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.9 }}
+              viewport={{ always: true }}
+            >
+              {item.cards.map((card, idx) => {
+                const Icon = card.icon;
+                return (
+                  <div
+                    key={idx}
+                    className="bg-white/10 backdrop-blur-lg p-6 rounded-2xl text-white shadow-lg hover:bg-white/20 transition"
+                  >
+                    <Icon className="w-10 h-10 text-green-400 mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+                    <p className="text-sm text-gray-200">{card.desc}</p>
+                  </div>
+                );
+              })}
+            </motion.div>
           </div>
         </section>
       ))}

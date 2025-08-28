@@ -5,14 +5,14 @@ import emergency from "../../assets/emergency.jpeg";
 const PartnerNow = () => {
   return (
     <section className="bg-[#f5f3f7] py-20 relative">
-      <div className="max-w-7xl px-6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="max-w-7xl px-6 mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
         
         {/* Left Image */}
         <motion.div
           initial={{ x: -150, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ always: true }}
+          viewport={{ once: true }}
           className="flex justify-center md:justify-end"
         >
           <img
@@ -27,15 +27,15 @@ const PartnerNow = () => {
           initial={{ x: 150, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1, ease: "easeOut" }}
-          viewport={{ always: true }}
+          viewport={{ once: true }}
           className="relative pl-8"
         >
           {/* Animated Vertical Line */}
           <motion.div
             initial={{ height: 0 }}
-            whileInView={{ height: "70%" }}
+            whileInView={{ height: "80%" }}
             transition={{ duration: 2 }}
-            viewport={{ always: true }}
+            viewport={{ once: true }}
             className="absolute left-0 top-0 w-[3px] bg-[#927cd9] rounded-full"
           />
 
@@ -50,9 +50,15 @@ const PartnerNow = () => {
           </h2>
 
           {/* Emotional Paragraph */}
-          <p className="text-gray-700 text-lg leading-relaxed mb-8 max-w-lg">
-           Every minute of delay can take away a father, mother, or child. Partner with Respondrz to ensure every family gets the help they need in time. Your support today could save someone’s loved one tomorrow.          
-           </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4 max-w-lg">
+            Whether it’s a flood, earthquake, epidemic, or large-scale accident
+            — Respondrz makes sure everyone knows what to do, when to do it, and
+            how to do it together.When lives are on the line, paperwork and phone calls cause delays,
+            which are unacceptable. By bringing real-time data, seamless
+            communication, and digital insights into the heart of emergency
+            response, Respondrz ensures no cry for help goes unheard.
+          </p>
+
           {/* CTA Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
