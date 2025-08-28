@@ -7,6 +7,9 @@ import OurMission from '../AboutUs/OurMission'
 import OurVision from "../AboutUs/OurVision"
 import Footer from '../Utils/Footer'
 import FAQs from '../AboutUs/FAQs'
+import Matters from '../AboutUs/Matters'
+import CTA from '../AboutUs/CTA'
+
 
 const AboutUs = () => {
   return (
@@ -17,6 +20,8 @@ const AboutUs = () => {
    <OurMission />
    <OurVision />
    <OurValues />
+   <Matters />
+   <CTA />
    <FAQs />
    <Footer />
    </>

@@ -8,12 +8,15 @@ import {
 const FAQs = () => {
   return (
     <div className="flex justify-center items-center py-10">
+      <div>
+        <h1 className="flex justify-center items-center font-extrabold text-4xl">FAQs</h1>
       <Accordion
         type="single"
         collapsible
-        className="w-[900px] bg-white shadow-md rounded-xl p-6"
-        defaultValue="item-1"
+        className="w-[900px] bg-white shadow-xl rounded-xl p-6"
+        defaultValue="item-item"
       >
+        
         <AccordionItem value="item-1">
           <AccordionTrigger className="text-lg font-semibold">
             What is Respondrz?
@@ -52,6 +55,7 @@ const FAQs = () => {
           </AccordionContent>
         </AccordionItem>
       </Accordion>
+      </div>
     </div>
   )
 }

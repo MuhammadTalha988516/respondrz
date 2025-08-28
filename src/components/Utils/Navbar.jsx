@@ -53,7 +53,7 @@ function Navbar() {
               <NavLink
                 to="/about-us"
                 className={({ isActive }) =>
-                  `${linkClasses} ${isActive ? "bg-orange-600 text-white" : ""}`
+                  `${linkClasses} ${isActive ? "bg-red-500 text-white" : ""}`
                 }
               >
                 About
@@ -63,7 +63,7 @@ function Navbar() {
               <NavLink
                 to="/partners"
                 className={({ isActive }) =>
-                  `${linkClasses} ${isActive ? "bg-orange-600 text-white" : ""}`
+                  `${linkClasses} ${isActive ? "bg-red-500 text-white" : ""}`
                 }
               >
                 Partners
@@ -73,7 +73,7 @@ function Navbar() {
               <NavLink
                 to="/impact"
                 className={({ isActive }) =>
-                  `${linkClasses} ${isActive ? "bg-orange-600 text-white" : ""}`
+                  `${linkClasses} ${isActive ? "bg-red-500 text-white" : ""}`
                 }
               >
                 Impact
@@ -83,14 +83,14 @@ function Navbar() {
               <NavLink
                 to="/contact-us"
                 className={({ isActive }) =>
-                  `${linkClasses} ${isActive ? "bg-orange-600 text-white" : ""}`
+                  `${linkClasses} ${isActive ? "bg-red-500 text-white" : ""}`
                 }
               >
                 Contact Us
               </NavLink>
             </li>
           </ul>
-          <button className="bg-orange-600 text-white px-6 py-[18px] font-semibold hover:bg-orange-700 cursor-pointer transition rounded-full">
+          <button className="bg-red-500 text-white px-6 py-[18px] font-semibold hover:bg-red-700 cursor-pointer transition rounded-full">
             Get an Ambulance
           </button>
         </div>

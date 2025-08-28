@@ -22,7 +22,7 @@ const Footer = () => {
       const data = await res.json();
       setMessage(data.message);
       setEmail(""); // clear field
-    } catch (error) {
+    } catch (err) {
       setMessage("Something went wrong. Try again.");
     }
   };

@@ -30,10 +30,7 @@ const OurMission = () => {
       >
         <h1 className="text-4xl  font-bold">Our Mission</h1>
         <p className="text-xl  leading-relaxed max-w-lg">
-          To create a world where immediate emergency response is accessible to 
-          everyone, everywhere, regardless of time, location, or circumstance. 
-          We envision a future where emergency care is democratized, and no one 
-          feels helpless in a critical moment.
+        To digitize and streamline crisis response so that <span className="text-black"> Governments, NGOs, Hospitals, and Corporate Sector can save more lives, protect more families, and rebuild communities faster.</span>
         </p>
       </div>
 

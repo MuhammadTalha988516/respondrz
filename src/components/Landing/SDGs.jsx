@@ -13,7 +13,7 @@ import { ChevronRight } from 'lucide-react'
 const SDGs = () => {
   return (
     <div className="w-full h-auto flex flex-col items-center space-y-10 py-12 px-4">
-      
+      <h1 className='font-bold text-3xl'>Helping Pakistan achieve the SDGs.</h1>
       {/* Title Banner */}
       <img 
         src={SDG} 
@@ -22,8 +22,8 @@ const SDGs = () => {
       />
 
       {/* SDG Icons */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-7 gap-6 justify-items-center w-full max-w-6xl">
-        {[SDG1, SDG3, SDG5, SDG8, SDG9, SDG11, SDG17].map((icon, i) => (
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 mx-auto gap-6 justify-items-center w-full max-w-6xl">
+        {[SDG3, SDG5, SDG8, SDG9, SDG11, SDG17].map((icon, i) => (
           <img 
             key={i} 
             src={icon} 
