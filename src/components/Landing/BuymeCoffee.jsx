@@ -41,7 +41,7 @@ const BuymeCoffee = () => {
                 onClick={() => setOpen(!open)}
                 className="text-[#F34434] font-semibold underline hover:no-underline"
               >
-                {open ? "Hide Details" : "Click Me to Learn More"}
+                {open ? "Hide Details" : "Click Me "}
               </button>
             </div>
 
@@ -72,8 +72,8 @@ const BuymeCoffee = () => {
                     Your kindness becomes infrastructure. Your generosity
                     becomes survival. Your legacy becomes resilience.
                   </p>
-                  <p className="font-semibold text-[#F34434]">
-                    👉 If you’re in a position to give, Respondrz turns your gift
+                  <p className="font-bold text-[#F34434]">
+                    If you’re in a position to give, Respondrz turns your gift
                     into a lifeline. Let’s make compassion actionable.
                   </p>
                 </motion.div>

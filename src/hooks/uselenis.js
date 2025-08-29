@@ -5,7 +5,7 @@ import Lenis from "@studio-freight/lenis";
 export const useLenis = () => {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2, // smoothness control
+      duration: 1.5, // smoothness control
       smooth: true,
     });
 
