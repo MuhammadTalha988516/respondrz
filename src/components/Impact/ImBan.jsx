@@ -10,11 +10,11 @@ const ImBan = () => {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
 
       {/* Centered Content */}
       <div className="relative z-10 text-center px-4">
-        <h1 className="text-4xl md:text-6xl text-[#F34434] font-bold mb-6">
+        <h1 className="text-4xl md:text-6xl text-green-600 font-bold mb-6">
           RespondrZ: Saving Lives, Faster Than Ever
           <br />
         </h1>

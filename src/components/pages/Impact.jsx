@@ -6,6 +6,8 @@ import SectorImpact from "../Impact/SectorImpact"
 import Footer from "../Utils/Footer";
 import CaseStudy from "../Impact/PartnerNow";
 import Navbar from "../Utils/Navbar";
+import ISdgs from "../Impact/ISdgs"
+import PublicBenefits from "../Impact/PublicBenefits";
 
 const Impact = () => {
   return (
@@ -13,6 +15,8 @@ const Impact = () => {
       <Navbar/>
       <ImBan/>
       <ImpactStats />
+      <ISdgs/>
+      <PublicBenefits/>
       <KeyImpactAreas />
       <SectorImpact/>
       <CaseStudy/>

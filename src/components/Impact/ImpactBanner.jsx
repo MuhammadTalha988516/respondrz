@@ -25,8 +25,7 @@ const ImpactBanner = () => {
 
             <div className="text-xl md:text-2xl max-w-xl text-slate-800 ">
               <p>
-                We proudly support the United Nations Sustainable Development Goals (SDGs), with measurable contributions to health, equality, sustainable cities, innovation, partnerships, and environmental protection. Every life saved, every second reduced in response time, and every resource optimized brings us closer to a world where safety and dignity are not privileges, but rights.
-              </p>
+            We proudly support the United Nations Sustainable Development Goals (SDGs), with measurable contributions to health, equality, sustainable cities, innovation, partnerships, and environmental protection. Every life saved, every second reduced in response time, and every resource optimized brings us closer to a world where safety and dignity are not privileges, but rights.              </p>
             </div>
           </motion.div>
 
