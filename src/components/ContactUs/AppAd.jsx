@@ -20,9 +20,22 @@ const AppAd = () => {
             always ready, no matter where you are.
           </p>
 
-          <button className="bg-white text-[#F34434] px-4 py-2 md:px-5 md:py-3 rounded-lg font-semibold shadow-md hover:bg-gray-700 hover:text-white transition">
-            Download App
-          </button>
+          <div className="flex gap-3">
+            <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on App Store"
+                className="h-12"
+              />
+            </a>
+            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                alt="Get it on Google Play"
+                className="h-12"
+              />
+            </a>
+          </div>
         </div>
 
         {/* Right: Phones */}

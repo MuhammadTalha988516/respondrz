@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import Logo from "../../assets/Logo.png";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const location = useLocation();
@@ -29,16 +30,16 @@ function Navbar() {
         </NavLink>
 
         
-        <button
+        <Link
           onClick={() => setMenuOpen(!menuOpen)}
           className="md:hidden text-white ml-4 flex-shrink-0"
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex sticky items-center flex-grow rounded-4xl ml-70">
-          <ul className="flex bg-black/50 border border-red-500  text-white text-sm font-medium rounded-full overflow-hidden shadow-lg">
+          <ul className="flex bg-black/50 border border-red-500 mr-2 text-white text-sm font-medium rounded-full overflow-hidden shadow-lg">
             <li>
               <NavLink
                 to="/"
@@ -90,9 +91,9 @@ function Navbar() {
               </NavLink>
             </li>
           </ul>
-          <button className="bg-red-500 text-white px-6 py-[18px] font-semibold hover:bg-red-700 cursor-pointer transition rounded-full">
+          <Link to='/contact-us' className="bg-red-500 text-white px-6 py-[18px] font-semibold hover:bg-red-700 cursor-pointer transition rounded-full">
             Get an Ambulance
-          </button>
+          </Link>
         </div>
       </div>
 
