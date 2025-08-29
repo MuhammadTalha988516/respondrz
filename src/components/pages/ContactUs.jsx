@@ -5,6 +5,7 @@ import CTA from "../ContactUs/CTA"
 import Form from "../ContactUs/Form"
 import Footer from '../Utils/Footer'
 import AppAd from '../ContactUs/AppAd'
+import PartnershipForm from '../ContactUs/PartnershipForm'
 const ContactUs = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const ContactUs = () => {
     <CTA />
     <Form />
     <AppAd />
+    <PartnershipForm/>
     <Footer />
     </div>
     

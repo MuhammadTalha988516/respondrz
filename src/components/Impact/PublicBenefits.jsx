@@ -10,6 +10,7 @@ import settings from "react-useanimations/lib/settings";
 import searchToX from "react-useanimations/lib/searchToX";
 import trash from "react-useanimations/lib/trash";
 import github from "react-useanimations/lib/github";
+import menu from "react-useanimations/lib/menu";
 
 const PublicBenefits = () => {
   const sections = [
@@ -76,7 +77,7 @@ const PublicBenefits = () => {
           ],
         },
         {
-          icon: heart,
+          icon: lock,
           title: "Support at Home",
           desc: "Help tailored to vulnerable citizens where they live.",
           features: [
@@ -132,7 +133,7 @@ const PublicBenefits = () => {
           features: ["Easy integrations", "Automated emergency alerts", "Fast adoption"],
         },
         {
-          icon: activity,
+          icon: menu,
           title: "Stronger Ecosystem",
           desc: "Building connected emergency solutions.",
           features: [
@@ -142,7 +143,7 @@ const PublicBenefits = () => {
           ],
         },
         {
-          icon: lock,
+          icon: trash,
           title: "Reliable Security",
           desc: "Data safety for critical integrations.",
           features: [

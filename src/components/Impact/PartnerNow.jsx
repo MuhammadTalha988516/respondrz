@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // ✅ Import Link
 import emergency from "../../assets/emergency.jpeg";
 
 const PartnerNow = () => {
@@ -46,27 +47,38 @@ const PartnerNow = () => {
 
           {/* Main Heading */}
           <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 leading-snug mb-6 font-serif">
-            Together, we can <br /> save more lives
+            A Movement for Better Living
           </h2>
 
           {/* Emotional Paragraph */}
           <p className="text-gray-700 text-lg leading-relaxed mb-4 max-w-lg">
-            Whether it’s a flood, earthquake, epidemic, or large-scale accident
-            — Respondrz makes sure everyone knows what to do, when to do it, and
-            how to do it together.When lives are on the line, paperwork and phone calls cause delays,
-            which are unacceptable. By bringing real-time data, seamless
-            communication, and digital insights into the heart of emergency
-            response, Respondrz ensures no cry for help goes unheard.
+            Respondrz is built on a simple truth: saving lives should not depend on chance, privilege, or geography. By connecting technology with humanity, we are building a system where emergencies are met with speed, dignity, and care.         
+            This is more than innovation. This is impact. This is Respondrz.
+            Join us, Join the moment, Create the Impact, because when lives are on the line, we can’t afford to wait.
           </p>
 
-          {/* CTA Button */}
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-10 py-3 border-2 border-[#927cd9] text-black font-bold rounded-lg shadow-md hover:bg-[#927cd9] hover:text-white transition"
-          >
-            Become a Partner
-          </motion.button>
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4">
+            <Link to="/impact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-10 py-3 border-2 border-[#927cd9] text-black font-bold rounded-lg shadow-md hover:bg-[#927cd9] hover:text-white transition"
+              >
+                Create Impact
+              </motion.button>
+            </Link>
+
+            <Link to="/contact-us">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-10 py-3 border-2 border-[#927cd9] text-black font-bold rounded-lg shadow-md hover:bg-[#927cd9] hover:text-white transition"
+              >
+                Contact Us
+              </motion.button>
+            </Link>
+          </div>
         </motion.div>
       </div>
     </section>
