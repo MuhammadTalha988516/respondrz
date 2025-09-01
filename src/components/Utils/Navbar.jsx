@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import Logo from "../../assets/Logo.png";
-import { Link } from "react-router-dom";
+import Logo from "../../assets/Logo.webp";
 
 function Navbar() {
   const location = useLocation();
@@ -14,32 +13,32 @@ function Navbar() {
   }, [location.pathname]);
 
   const linkClasses =
-    "w-[140px] h-[52px] flex items-center justify-center text-center cursor-pointer transition-all hover:bg-white hover:text-black";
+    "w-[120px] sm:w-[140px] h-[44px] sm:h-[52px] flex items-center justify-center text-center cursor-pointer transition-all hover:bg-white hover:text-black text-sm sm:text-base";
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 ">
-      <div className=" mx-auto flex items-center justify-between flex-nowrap ">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-10 py-2">
         
         {/* Logo */}
         <NavLink to="/" className="flex-shrink-0">
           <img
             src={Logo}
             alt="logo"
-            className="h-20 w-auto object-contain cursor-pointer ml-10"
+            className="h-14 sm:h-20 w-auto object-contain cursor-pointer"
           />
         </NavLink>
 
-        
-        <Link
+        {/* Mobile Menu Toggle */}
+        <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-white ml-4 flex-shrink-0"
+          className="md:hidden text-white ml-2"
         >
           {menuOpen ? <X size={28} /> : <Menu size={28} />}
-        </Link>
+        </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex sticky items-center flex-grow rounded-4xl ml-70">
-          <ul className="flex bg-black/50 border border-red-500 mr-2 text-white text-sm font-medium rounded-full overflow-hidden shadow-lg">
+        <div className="hidden md:flex items-center space-x-4 lg:space-x-6">
+          <ul className="flex bg-black/50 border border-red-500 text-white text-sm lg:text-base font-medium rounded-full overflow-hidden shadow-lg">
             <li>
               <NavLink
                 to="/"
@@ -91,7 +90,12 @@ function Navbar() {
               </NavLink>
             </li>
           </ul>
-          <Link to='/contact-us' className="bg-red-500 text-white px-6 py-[18px] font-semibold hover:bg-red-700 cursor-pointer transition rounded-full">
+
+          {/* CTA Button */}
+          <Link
+            to="/contact-us"
+            className="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-[18px] font-semibold hover:bg-red-700 transition rounded-full text-sm sm:text-base"
+          >
             Get an Ambulance
           </Link>
         </div>
@@ -99,40 +103,28 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden absolute top-[90px] left-0 w-full bg-black/90 text-white flex flex-col items-center space-y-2 py-4">
-          <NavLink
-            to="/"
-            className="py-3 w-full text-center hover:bg-orange-600"
-          >
+        <div className="md:hidden absolute top-[72px] sm:top-[90px] left-0 w-full bg-black/90 text-white flex flex-col items-center space-y-1 sm:space-y-2 py-3 sm:py-4">
+          <NavLink to="/" className="py-2 sm:py-3 w-full text-center hover:bg-red-600">
             Home
           </NavLink>
-          <NavLink
-            to="/about"
-            className="py-3 w-full text-center hover:bg-orange-600"
-          >
+          <NavLink to="/about-us" className="py-2 sm:py-3 w-full text-center hover:bg-red-600">
             About
           </NavLink>
-          <NavLink
-            to="/partners"
-            className="py-3 w-full text-center hover:bg-orange-600"
-          >
+          <NavLink to="/partners" className="py-2 sm:py-3 w-full text-center hover:bg-red-600">
             Partners
           </NavLink>
-          <NavLink
-            to="/impact"
-            className="py-3 w-full text-center hover:bg-orange-600"
-          >
+          <NavLink to="/impact" className="py-2 sm:py-3 w-full text-center hover:bg-red-600">
             Impact
           </NavLink>
-          <NavLink
-            to="/contact-us"
-            className="py-3 w-full text-center hover:bg-orange-600"
-          >
+          <NavLink to="/contact-us" className="py-2 sm:py-3 w-full text-center hover:bg-red-600">
             Contact Us
           </NavLink>
-          <button className="bg-orange-600 text-white px-6 py-3 font-semibold w-full hover:bg-orange-700">
+          <Link
+            to="/contact-us"
+            className="bg-red-600 text-white px-4 sm:px-6 py-2 sm:py-3 font-semibold w-full text-center hover:bg-red-700"
+          >
             Get An Ambulance
-          </button>
+          </Link>
         </div>
       )}
     </nav>

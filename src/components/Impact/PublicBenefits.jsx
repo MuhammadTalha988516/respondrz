@@ -170,49 +170,55 @@ const PublicBenefits = () => {
         return (
           <section
             key={section.id}
-            className="bg-gray-800 text-white py-20 mb-10 mt-10"
+            className="bg-gray-800 text-white py-12 sm:py-16 md:py-20 mb-8 sm:mb-10 mt-8 sm:mt-10"
           >
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               {/* Section Title */}
               <motion.div
                 initial={titleAnim}
                 whileInView={{ opacity: 1, x: 0, y: 0 }}
                 transition={{ duration: 0.8 }}
-                viewport={{ once: true }}
-                className="text-center mb-12"
+                viewport={{ always: true }}
+                className="text-center mb-8 sm:mb-10 md:mb-12"
               >
-                <h2 className="text-4xl font-bold mb-4">{section.title}</h2>
-                <p className="text-gray-300 max-w-2xl mx-auto">{section.desc}</p>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+                  {section.title}
+                </h2>
+                <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
+                  {section.desc}
+                </p>
               </motion.div>
 
               {/* Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {section.cards.map((card, i) => (
                   <motion.div
                     key={i}
                     initial={cardAnim}
                     whileInView={{ opacity: 1, x: 0, y: 0 }}
                     transition={{ duration: 0.6, delay: i * 0.2 }}
-                    viewport={{ once: true }}
+                    viewport={{ always: true }}
                     whileHover={{
                       scale: 1.05,
                       boxShadow: "0px 8px 30px rgba(134,239,172,0.5)",
                     }}
-                    className="bg-gray-900 rounded-2xl shadow-lg p-8 transition-all duration-500 cursor-pointer hover:bg-gray-700"
+                    className="bg-gray-900 rounded-2xl shadow-lg p-6 sm:p-8 transition-all duration-500 cursor-pointer hover:bg-gray-700"
                   >
-                    <div className="flex items-center gap-3 mb-6">
+                    <div className="flex items-center gap-3 mb-4 sm:mb-6">
                       <UseAnimations
                         animation={card.icon}
-                        size={40}
+                        size={36}
                         strokeColor="#86efac"
                         autoplay
                         loop
                         speed={0.7}
                       />
-                      <h3 className="text-xl font-semibold">{card.title}</h3>
+                      <h3 className="text-lg sm:text-xl font-semibold">{card.title}</h3>
                     </div>
-                    <p className="mb-6 text-gray-300">{card.desc}</p>
-                    <ul className="space-y-3 text-gray-400">
+                    <p className="mb-4 sm:mb-6 text-gray-300 text-sm sm:text-base">
+                      {card.desc}
+                    </p>
+                    <ul className="space-y-2 sm:space-y-3 text-gray-400 text-sm sm:text-base">
                       {card.features.map((feat, j) => (
                         <li key={j} className="flex items-center gap-2">
                           <span className="w-2 h-2 bg-green-300 rounded-full"></span>

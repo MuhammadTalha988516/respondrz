@@ -31,6 +31,9 @@ const FutureSectorImpact = () => {
     },
   ];
 
+  // 👇 One ref for the entire stats grid
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
   return (
     <section className="bg-white py-16 font-serif">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -43,31 +46,29 @@ const FutureSectorImpact = () => {
         </p>
 
         {/* Stats */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 text-center">
-          {stats.map((stat, index) => {
-            const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
-
-            return (
-              <div key={index} ref={ref}>
-                <h2 className="text-5xl md:text-6xl font-black text-gray-900">
-                  {inView ? (
-                    <CountUp
-                      key={inView}
-                      start={0}
-                      end={stat.number}
-                      duration={1.5}
-                      separator=","
-                      suffix={stat.suffix}
-                    />
-                  ) : (
-                    "0" + stat.suffix
-                  )}
-                </h2>
-                <div className="w-12 h-1 bg-orange-500 mx-auto my-4"></div>
-                <p className="text-gray-700 text-lg md:text-xl">{stat.text}</p>
-              </div>
-            );
-          })}
+        <div
+          ref={ref}
+          className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-12 text-center"
+        >
+          {stats.map((stat, index) => (
+            <div key={index} className="transition-transform duration-500 hover:scale-105">
+              <h2 className="text-5xl md:text-6xl font-black text-gray-900">
+                {inView ? (
+                  <CountUp
+                    start={0}
+                    end={stat.number}
+                    duration={2}
+                    separator=","
+                    suffix={stat.suffix}
+                  />
+                ) : (
+                  "0" + stat.suffix
+                )}
+              </h2>
+              <div className="w-12 h-1 bg-orange-500 mx-auto my-4"></div>
+              <p className="text-gray-700 text-lg md:text-xl">{stat.text}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

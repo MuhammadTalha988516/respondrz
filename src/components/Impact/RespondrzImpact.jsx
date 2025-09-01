@@ -1,10 +1,10 @@
 import React from "react";
 import { useInView } from "react-intersection-observer";
-import stats from "../../assets/stats.jpg";
+import stats from "../../assets/stats.webp";
 
 const RespondrzImpact = () => {
   const { ref, inView } = useInView({
-    triggerAlways: true,
+    triggerOnce: false, // set to true if you want it to animate only always
     threshold: 0.3,
   });
 
@@ -38,7 +38,7 @@ const RespondrzImpact = () => {
         {/* Left Side - Text Content */}
         <div ref={ref} className="text-white lg:pr-10 space-y-10">
           <p
-            className={`text-red-400 text-xl font-bold mb-4 transition-all duration-700 ${
+            className={`text-red-300 text-xl font-bold mb-4 transition-all duration-700 ${
               inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
             }`}
           >
@@ -58,7 +58,7 @@ const RespondrzImpact = () => {
               className={`flex items-center gap-8 transition-all duration-700 ${
                 inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
               }`}
-              style={{ transitionDelay: `${index * 200}ms` }}
+              style={{ transitionDelay: `${index * 0.2}s` }} // FIX: seconds not ms
             >
               <div className="min-w-[200px] text-right">
                 <h3 className="text-5xl font-black">{goal.value}</h3>

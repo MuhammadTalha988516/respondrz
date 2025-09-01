@@ -32,21 +32,22 @@ const Form = () => {
   };
 
   return (
-    <div className="flex justify-center items-center py-12 bg-gray-50">
-      <div className="bg-white shadow-lg rounded-2xl p-8 w-[500px]">
+    <div className="flex justify-center items-center py-12 bg-gray-50 px-4">
+      <div className="bg-white shadow-lg rounded-2xl p-6 sm:p-8 w-full max-w-lg">
         <h2 className="text-2xl font-bold mb-6 text-gray-800 text-center">
           Get in Touch
         </h2>
 
         <form className="space-y-4" onSubmit={handleSubmit}>
-          <div className="flex gap-4">
+          {/* First + Last Name */}
+          <div className="flex flex-col sm:flex-row gap-4">
             <input
               type="text"
               name="firstName"
               placeholder="First Name"
               value={formData.firstName}
               onChange={handleChange}
-              className="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F34434]"
+              className="w-full sm:w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F34434]"
               required
             />
             <input
@@ -55,11 +56,12 @@ const Form = () => {
               placeholder="Last Name"
               value={formData.lastName}
               onChange={handleChange}
-              className="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F34434]"
+              className="w-full sm:w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F34434]"
               required
             />
           </div>
 
+          {/* Email */}
           <input
             type="email"
             name="email"
@@ -70,6 +72,7 @@ const Form = () => {
             required
           />
 
+          {/* Phone */}
           <input
             type="tel"
             name="phone"
@@ -79,6 +82,7 @@ const Form = () => {
             className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#F34434]"
           />
 
+          {/* Message */}
           <textarea
             name="message"
             placeholder="Message"
@@ -89,6 +93,7 @@ const Form = () => {
             required
           ></textarea>
 
+          {/* Button */}
           <button
             type="submit"
             className="w-full bg-[#F34434] text-white py-3 rounded-lg font-semibold hover:bg-red-600 transition"

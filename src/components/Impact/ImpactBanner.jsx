@@ -19,14 +19,13 @@ const ImpactBanner = () => {
               About Respondrz
             </p>
 
-            <h2 className="text-4xl md:text-4xl font-extrabold text-slate-800 mb-8">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-slate-800 mb-6 leading-tight">
               Our Impact
             </h2>
 
-            <div className="text-xl md:text-2xl max-w-xl text-slate-800 ">
-              <p>
-            We proudly support the United Nations Sustainable Development Goals (SDGs), with measurable contributions to health, equality, sustainable cities, innovation, partnerships, and environmental protection. Every life saved, every second reduced in response time, and every resource optimized brings us closer to a world where safety and dignity are not privileges, but rights.              </p>
-            </div>
+            <p className="text-xl md:text-2xl max-w-xl text-slate-700 leading-relaxed">
+              We proudly support the United Nations Sustainable Development Goals (SDGs), with measurable contributions to health, equality, sustainable cities, innovation, partnerships, and environmental protection. Every life saved, every second reduced in response time, and every resource optimized brings us closer to a world where safety and dignity are not privileges, but rights.
+            </p>
           </motion.div>
 
           {/* Right column: GIF */}
@@ -34,13 +33,13 @@ const ImpactBanner = () => {
             className="lg:col-span-5 flex justify-center"
             initial={{ x: 200, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
             viewport={{ always: true }}
           >
             <img
               src={sdggif}
               alt="Impact animation"
-              className="w-full max-w-md"
+              className="w-full max-w-sm md:max-w-md rounded-xl shadow-lg"
             />
           </motion.div>
         </div>

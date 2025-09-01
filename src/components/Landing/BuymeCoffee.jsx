@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Coffee } from "lucide-react";
 
 const BMC_LOGO =
-  "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png";
+  "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.webp";
 
 const BuymeCoffee = () => {
   const [open, setOpen] = useState(false);

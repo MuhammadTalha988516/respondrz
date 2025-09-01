@@ -1,9 +1,9 @@
 import React from "react"
-import banner from "../../assets/bannerabout.png"
+import banner from "../../assets/bannerabout.webp"
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-[300px] md:h-[450px] lg:h-[550px] overflow-hidden">
+    <div className="relative w-full h-[250px] sm:h-[300px] md:h-[450px] lg:h-[550px] overflow-hidden">
       {/* Banner Image */}
       <img
         src={banner}
@@ -14,9 +14,9 @@ const Banner = () => {
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/40 flex justify-center items-center">
+      <div className="absolute inset-0 bg-black/40 flex justify-center items-center px-4 text-center">
         <h1
-          className="text-white text-4xl md:text-6xl font-extrabold uppercase tracking-wide drop-shadow-lg"
+          className="text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold uppercase tracking-wide drop-shadow-lg"
           data-aos="fade-up"
           data-aos-delay="400"
         >

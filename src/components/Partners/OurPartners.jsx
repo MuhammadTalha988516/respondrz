@@ -1,12 +1,19 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HeartPulse, BarChart3, Activity, Users, Building2, ShieldCheck } from "lucide-react";
+import {
+  HeartPulse,
+  BarChart3,
+  Activity,
+  Users,
+  Building2,
+  ShieldCheck,
+} from "lucide-react";
 
-import bg1 from "../../assets/bg1.jpg";
-import bg2 from "../../assets/bg2.jpeg";
-import bg3 from "../../assets/bg3.jpg";
-import bg4 from "../../assets/bg4.jpg";
-import bg from "../../assets/bg.jpg";
+import bg1 from "../../assets/bg1.webp";
+import bg2 from "../../assets/bg2.webp";
+import bg3 from "../../assets/bg3.webp";
+import bg4 from "../../assets/bg4.webp";
+import bg from "../../assets/bg.webp";
 
 const audiences = [
   {
@@ -71,7 +78,7 @@ const OurPartners = () => {
         >
           {/* Background */}
           <div
-            className="absolute inset-0 h-[100vh] bg-cover bg-center"
+            className="absolute inset-0 h-full bg-cover bg-center"
             style={{ backgroundImage: `url(${item.backgroundImage})` }}
           >
             <div className="absolute inset-0 bg-black/60"></div>
@@ -79,7 +86,7 @@ const OurPartners = () => {
 
           {/* Content (Zig-Zag layout) */}
           <div
-            className={`relative z-10  mt-10 mx-auto px-6 lg:px-12 py-20 flex flex-col md:flex-row items-start gap-50
+            className={`relative z-10 mt-10 mx-auto px-6 lg:px-12 py-20 flex flex-col md:flex-row items-start gap-12 md:gap-20
               ${index % 2 === 1 ? "md:flex-row-reverse" : ""}`}
           >
             {/* Left/Right Text */}
@@ -96,17 +103,14 @@ const OurPartners = () => {
               <p className="text-lg md:text-xl mb-8 text-gray-200 max-w-2xl">
                 {item.desc}
               </p>
-              <div className="flex gap-4">
-                <button className="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg text-white font-medium transition">
-                  Get Started
-                </button>
-
-              </div>
+              <button className="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg text-white font-medium transition">
+                Get Started
+              </button>
             </motion.div>
 
             {/* Right/Left Cards */}
             <motion.div
-              className="flex-1 grid grid-cols-1 sm:grid-cols-1 gap-6"
+              className="flex-1 grid grid-cols-1  lg:grid-cols-1 gap-6"
               initial={{ y: 100, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.9 }}

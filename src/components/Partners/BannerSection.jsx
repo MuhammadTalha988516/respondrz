@@ -5,7 +5,7 @@ import bgImage from "../../assets/Pban.webp"; // your background image
 const BannerSection = () => {
   return (
     <section
-      className="relative w-full h-[100vh] flex items-center mb-10 justify-center bg-cover bg-center"
+      className="relative w-full h-screen flex items-center justify-center mb-10 bg-cover bg-center"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Overlay */}
@@ -13,10 +13,9 @@ const BannerSection = () => {
 
       {/* Centered Content */}
       <div className="relative z-10 text-center text-white px-4">
-        <h1 className="text-6xl md:text-7xl font-bold mb-6">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
           <Typewriter
             words={["Our Solutions"]}
-             // type once
             cursor
             cursorStyle="|"
             typeSpeed={80}
@@ -24,12 +23,11 @@ const BannerSection = () => {
           />
         </h1>
 
-        <p className="text-3xl max-w-4xl md:text-2xl">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed">
           <Typewriter
             words={[
               "Respondrz is not just software, it is a lifeline. Our digital platform brings together all the players who matter in a crisis to create one synchronized response system."
             ]}
-             
             cursor
             cursorStyle="|"
             typeSpeed={80}
