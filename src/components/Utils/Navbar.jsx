@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink, useLocation, Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import Logo from "../../assets/Logo.webp";
+import { motion } from "framer-motion";
 
 function Navbar() {
   const location = useLocation();
@@ -19,13 +19,24 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-full z-50 bg-transparent">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-10 py-2">
         
-        {/* Logo */}
+        {/* Rotating Logo as Text */}
         <NavLink to="/" className="flex-shrink-0">
-          <img
-            src={Logo}
-            alt="logo"
-            className="h-14 sm:h-20 w-auto object-contain cursor-pointer"
-          />
+          <motion.span
+            className="text-red-600 font-extrabold text-2xl sm:text-3xl tracking-wide cursor-pointer inline-block"
+            animate={{ rotateY: [0, 180, 0] }}
+            transition={{
+              repeat: Infinity,
+              duration: 6, // slower speed
+              ease: "easeInOut",
+            }}
+            style={{
+              display: "inline-block",
+              transformOrigin: "center",
+              perspective: 1000, // adds depth
+            }}
+          >
+            Respondrz
+          </motion.span>
         </NavLink>
 
         {/* Mobile Menu Toggle */}
