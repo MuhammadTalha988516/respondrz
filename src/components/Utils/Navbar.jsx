@@ -22,7 +22,7 @@ function Navbar() {
         {/* Rotating Logo as Text */}
         <NavLink to="/" className="flex-shrink-0">
           <motion.span
-            className="text-red-600 font-extrabold text-2xl sm:text-3xl tracking-wide cursor-pointer inline-block"
+            className="text-[#FB2C36] font-extrabold text-2xl sm:text-3xl tracking-wide cursor-pointer inline-block"
             animate={{ rotateY: [0, 180, 0] }}
             transition={{
               repeat: Infinity,

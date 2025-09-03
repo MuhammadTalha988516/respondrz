@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Coffee } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const BMC_LOGO =
-  "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.webp";
+  "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png";
 
 const BuymeCoffee = () => {
   const [open, setOpen] = useState(false);
@@ -96,14 +97,14 @@ const BuymeCoffee = () => {
                   />
                 </a>
               ) : (
-                <a
-                  href="https://www.buymeacoffee.com/YOUR_USERNAME"
+                <Link
+                  to='/contact-us'
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-yellow-400 text-black px-5 py-3 rounded-xl font-bold shadow hover:bg-yellow-500"
                 >
                   <Coffee size={22} /> Buy Me a Coffee
-                </a>
+                </Link>
               )}
             </div>
           </motion.div>

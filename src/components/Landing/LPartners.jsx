@@ -29,10 +29,10 @@ const PARTNERS_DATA = [
   },
   {
     id: "03",
-    title: "Corporate Sector",
-    subtitle: "CSR That Truly Saves Lives",
-    desc: "Corporate Social Responsibility (CSR) is not just about giving back—it is about creating lasting impact. RespondrZ offers a powerful avenue for corporations to contribute.",
-    bg: Corporate,
+    title: "Insurance Companies",
+    subtitle: "Enabling Smarter Healthcare Protection",
+    desc: "Insurance providers can make their services faster, smarter, and more impactful with RespondrZ's real-time integrations.",
+    bg: bg3,
   },
   {
     id: "04",
@@ -49,11 +49,12 @@ const PARTNERS_DATA = [
     bg: publicI,
   },
   {
+    
     id: "06",
-    title: "Insurance Companies",
-    subtitle: "Enabling Smarter Healthcare Protection",
-    desc: "Insurance providers can make their services faster, smarter, and more impactful with RespondrZ's real-time integrations.",
-    bg: bg3,
+    title: "Corporate Sector",
+    subtitle: "CSR That Truly Saves Lives",
+    desc: "Corporate Social Responsibility (CSR) is not just about giving back—it is about creating lasting impact. RespondrZ offers a powerful avenue for corporations to contribute.",
+    bg: Corporate,
   },
 ];
 
