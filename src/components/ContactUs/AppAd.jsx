@@ -1,7 +1,7 @@
 import React from "react"
-import mock1 from "../../assets/Mockup1.webp"
+
 import mock2 from "../../assets/Mockup2.webp"
-import mock3 from "../../assets/Mockup3.webp"
+
 
 const AppAd = () => {
   return (
@@ -39,28 +39,16 @@ const AppAd = () => {
           </div>
         </div>
 
-        {/* Right Content - Phones */}
-        <div className="relative flex justify-center items-end h-[400px] lg:h-[460px]">
-          {/* Left Phone */}
-          <img
-            src={mock1}
-            alt="App Mockup 1"
-            className="absolute w-[180px] md:w-[240px] lg:w-[320px] -top-8 lg:-top-12 -translate-x-[120%] rotate-[-10deg] z-0"
-          />
-
+        
+        <div className="relative flex justify-center mt-10 items-end h-[400px] lg:h-[500px]">
           {/* Center Phone */}
           <img
             src={mock2}
             alt="App Mockup 2"
-            className="relative w-[200px] md:w-[260px] lg:w-[340px] -top-10 lg:-top-16 z-20"
+            className="relative w-[400px] md:w-[460px] lg:w-[500px] -top-10 lg:-top-16 z-20"
           />
 
-          {/* Right Phone */}
-          <img
-            src={mock3}
-            alt="App Mockup 3"
-            className="absolute w-[180px] md:w-[240px] lg:w-[320px] -top-8 lg:-top-12 translate-x-[120%] rotate-[10deg] z-0"
-          />
+          
         </div>
       </div>
     </div>

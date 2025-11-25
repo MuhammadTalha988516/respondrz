@@ -30,7 +30,7 @@ const CTA = () => {
             <MapPin size={40} className="text-[#F34434]" aria-hidden="true" />
           </div>
           <h2 className="text-xl font-bold mb-2">Visit Us</h2>
-          <p className="text-gray-600">123 Main Street, Karachi</p>
+          <p className="text-gray-600">Vogue Towers, MM Alam Rd, Block C2 Block C 2 Gulberg III, Lahore</p>
         </div>
 
       </div>

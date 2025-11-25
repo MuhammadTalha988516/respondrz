@@ -18,10 +18,7 @@ const Contact = () => {
           Get in Touch With Us
         </h2>
         <p className="text-gray-200 text-sm sm:text-base md:text-lg max-w-sm sm:max-w-lg md:max-w-xl mb-4 sm:mb-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad,
-          molestias. Esse eveniet provident ipsum, cumque neque accusantium
-          fugit obcaecati modi expedita unde asperiores!
-        </p>
+          Have questions or want to collaborate? Reach out to learn how our platform drives social impact and streamlines emergency response for communities everywhere </p>
 
         <Link to="/contact-us">
           <button className="bg-red-600 cursor-pointer hover:bg-red-700 text-white px-6 sm:px-8 py-2 sm:py-3 rounded-md font-semibold text-sm sm:text-base transition">

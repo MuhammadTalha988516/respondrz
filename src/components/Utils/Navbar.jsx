@@ -107,7 +107,7 @@ function Navbar() {
             to="/contact-us"
             className="bg-red-500 text-white px-4 sm:px-6 py-2 sm:py-[18px] font-semibold hover:bg-red-700 transition rounded-full text-sm sm:text-base"
           >
-            Get an Ambulance
+            Partner with Us
           </Link>
         </div>
       </div>

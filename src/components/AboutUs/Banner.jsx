@@ -3,7 +3,7 @@ import banner from "../../assets/bannerabout.webp"
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-[250px] sm:h-[300px] md:h-[450px] lg:h-[550px] overflow-hidden">
+    <div className="relative w-full h-[100vh] overflow-hidden">
       {/* Banner Image */}
       <img
         src={banner}

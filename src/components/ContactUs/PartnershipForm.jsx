@@ -17,6 +17,11 @@ export default function PartnershipForm() {
 
   const [submitted, setSubmitted] = useState(false);
 
+  // Define the style once here to keep the code clean
+  // Removed 'focus:' from ring-2 and ring-red-500 so they are always on
+  const inputStyles =
+    "bg-gray-800 p-3 rounded-md w-full outline-none ring-2 ring-red-500";
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -80,7 +85,7 @@ export default function PartnershipForm() {
               onChange={handleChange}
               placeholder="First Name*"
               required
-              className="bg-gray-800 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-red-500"
+              className={inputStyles}
             />
             <input
               name="lastName"
@@ -88,7 +93,7 @@ export default function PartnershipForm() {
               onChange={handleChange}
               placeholder="Last Name*"
               required
-              className="bg-gray-800 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-red-500"
+              className={inputStyles}
             />
           </div>
 
@@ -99,14 +104,14 @@ export default function PartnershipForm() {
             onChange={handleChange}
             placeholder="Organization*"
             required
-            className="bg-gray-800 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-red-500"
+            className={inputStyles}
           />
           <input
             name="designation"
             value={formData.designation}
             onChange={handleChange}
             placeholder="Designation"
-            className="bg-gray-800 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-red-500"
+            className={inputStyles}
           />
 
           {/* Dropdowns */}
@@ -116,7 +121,7 @@ export default function PartnershipForm() {
               value={formData.buyCoffee}
               onChange={handleChange}
               required
-              className="bg-gray-800 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-red-500"
+              className={inputStyles}
             >
               <option value="">Buy Coffee for Needy?*</option>
               <option value="Yes">Yes</option>
@@ -127,7 +132,7 @@ export default function PartnershipForm() {
               value={formData.ambulance}
               onChange={handleChange}
               required
-              className="bg-gray-800 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-red-500"
+              className={inputStyles}
             >
               <option value="">Do you have an Ambulance?*</option>
               <option value="Yes">Yes</option>
@@ -144,7 +149,7 @@ export default function PartnershipForm() {
               onChange={handleChange}
               placeholder="Email*"
               required
-              className="bg-gray-800 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-red-500"
+              className={inputStyles}
             />
             <input
               name="phone"
@@ -153,7 +158,7 @@ export default function PartnershipForm() {
               onChange={handleChange}
               placeholder="Phone Number*"
               required
-              className="bg-gray-800 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-red-500"
+              className={inputStyles}
             />
           </div>
 
@@ -164,14 +169,14 @@ export default function PartnershipForm() {
               value={formData.country}
               onChange={handleChange}
               placeholder="Country"
-              className="bg-gray-800 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-red-500"
+              className={inputStyles}
             />
             <input
               name="city"
               value={formData.city}
               onChange={handleChange}
               placeholder="City"
-              className="bg-gray-800 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-red-500"
+              className={inputStyles}
             />
           </div>
 
@@ -183,7 +188,7 @@ export default function PartnershipForm() {
             placeholder="Message*"
             rows="4"
             required
-            className="bg-gray-800 p-3 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-red-500"
+            className={inputStyles}
           />
 
           {/* Submit Button */}

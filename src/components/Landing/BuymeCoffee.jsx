@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Coffee } from "lucide-react";
-import { Link } from "react-router-dom";
-
-const BMC_LOGO =
-  "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png";
+// import { Link } from "react-router-dom"; // Uncomment if linking internally
 
 const BuymeCoffee = () => {
   const [open, setOpen] = useState(false);
-  const [logoError, setLogoError] = useState(false);
 
   return (
     <section className="w-full py-20 bg-gradient-to-b from-yellow-50 to-white">
@@ -81,31 +77,17 @@ const BuymeCoffee = () => {
               )}
             </AnimatePresence>
 
-            {/* Donate Button */}
+            {/* Updated Donate Button */}
             <div className="mt-8 flex justify-center">
-              {!logoError ? (
-                <a
-                  href="https://www.buymeacoffee.com/YOUR_USERNAME"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={BMC_LOGO}
-                    alt="Buy Me a Coffee"
-                    className="h-14 hover:scale-105 transition"
-                    onError={() => setLogoError(true)}
-                  />
-                </a>
-              ) : (
-                <Link
-                  to='/contact-us'
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-yellow-400 text-black px-5 py-3 rounded-xl font-bold shadow hover:bg-yellow-500"
-                >
-                  <Coffee size={22} /> Buy Me a Coffee
-                </Link>
-              )}
+              <a
+                href="https://www.buymeacoffee.com/YOUR_USERNAME" // Replace with your actual link
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#FFDD00] text-black px-8 py-4 rounded-xl font-bold text-lg shadow-md hover:bg-yellow-400 hover:shadow-lg transition-all transform hover:-translate-y-1"
+              >
+                <Coffee size={24} /> 
+                Buy a Coffee
+              </a>
             </div>
           </motion.div>
         </div>
