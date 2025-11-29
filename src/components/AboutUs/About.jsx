@@ -9,7 +9,7 @@ const About = () => {
 
   return (
     <div className="w-full my-10 bg-gray-100">
-      {/* Hero Section */}
+      {/* Hero Sectio */}
       <div className="w-full h-[300px] md:h-[400px] lg:h-[450px] bg-gray-400 flex flex-col justify-center items-center text-center px-4 sm:px-6 md:px-12">
         <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-black">
           Who We Are
